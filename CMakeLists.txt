@@ -22,8 +22,7 @@ qt_add_qml_module(LidarCycleTask STATIC URI Lidar.CycleTask VERSION 1.0
     IMPORT_PATH ${import_paths}
     SOURCES ${headers} QML_FILES ${views})
 add_library(Lidar::CycleTask ALIAS LidarCycleTask)
-target_include_directories(LidarCycleTask PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-    PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include/Task/Cycle")
+target_include_directories(LidarCycleTask PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_link_libraries(LidarCycleTask PUBLIC Lidar::TaskUI)
 target_compile_features(LidarCycleTask PUBLIC cxx_std_20)
 target_compile_definitions(LidarCycleTask PUBLIC QT_NO_KEYWORDS)
